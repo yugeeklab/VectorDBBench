@@ -154,6 +154,7 @@ class DatasetManager(BaseModel):
         return DataSetIterator(self)
 
     def _validate_local_file(self):
+        return
         if not self.data_dir.exists():
             log.info(f"local file path not exist, creating it: {self.data_dir}")
             self.data_dir.mkdir(parents=True)
